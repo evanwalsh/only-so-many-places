@@ -56,7 +56,7 @@ INPUT_INTERACT;Search
 INPUT_LOOK;Look Around
 INPUT_PAUSE;Pause
 OBJECTIVE_FIND_CABLE;Find the power cable
-OBJECTIVE_END_GAME;Return to your room!
+OBJECTIVE_END_GAME;Use the game console in your room!
 END_GAME_WIN;You win
 END_GAME_LOSE;You lose
 UI_QUIT;Quit
