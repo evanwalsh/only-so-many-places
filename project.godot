@@ -140,6 +140,8 @@ run/main_scene="res://scenes/Title.tscn"
 run/delta_sync_after_draw=true
 boot_splash/use_filter=false
 config/icon="res://icon.png"
+config/macos_native_icon="res://icon.icns"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
