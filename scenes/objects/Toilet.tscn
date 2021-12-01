@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/objects/Interactive.gd" type="Script" id=1]
+[ext_resource path="res://textures/objects/toilet.png" type="Texture" id=2]
+[ext_resource path="res://audio/Interactive/toilet.wav" type="AudioStream" id=3]
+
+[sub_resource type="CircleShape2D" id=35]
+radius = 13.0
+
+[sub_resource type="RectangleShape2D" id=36]
+extents = Vector2( 7.5, 10 )
+
+[node name="Toilet" type="Node2D"]
+script = ExtResource( 1 )
+translation_name = "toilet"
+mom_wait_time = 6.0
+player_wait_time = 4.0
+annoyance_on_sight = 20
+sprite_path = NodePath("Sprite")
+area_path = NodePath("Area2D")
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, 1 )
+shape = SubResource( 35 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 0.5, -3 )
+shape = SubResource( 36 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+max_distance = 1000.0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/end_won.wav-32b04bd38f29106a23b2de4392278ca5.sample"
+
+[deps]
+
+source_file="res://audio/Game/end_won.wav"
+dest_files=[ "res://.import/end_won.wav-32b04bd38f29106a23b2de4392278ca5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

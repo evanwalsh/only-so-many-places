@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ui/default_theme.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/PlayUI.gd" type="Script" id=2]
+
+[node name="PlayUI" type="Control" groups=["in_game_ui"]]
+mouse_filter = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Canvas" type="CanvasLayer" parent="."]
+
+[node name="LeftData" type="GridContainer" parent="Canvas"]
+anchor_right = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RoomLabel" type="Label" parent="Canvas/LeftData"]
+visible = false
+margin_right = 228.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+text = "ROOM_NAME_UNKNOWN"
+valign = 1
+
+[node name="ObjectiveLabel" type="Label" parent="Canvas/LeftData"]
+margin_right = 460.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+text = "OBJECTIVE_FIND_CABLE"
+align = 2
+valign = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Canvas"]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -150.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = 13.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Annoyance" type="HBoxContainer" parent="Canvas/PanelContainer"]
+margin_right = 130.0
+margin_bottom = 13.0
+
+[node name="Label" type="Label" parent="Canvas/PanelContainer/Annoyance"]
+margin_right = 89.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+text = "UI_ANNOYANCE"
+
+[node name="Value" type="Label" parent="Canvas/PanelContainer/Annoyance"]
+margin_left = 93.0
+margin_right = 130.0
+margin_bottom = 13.0
+theme = ExtResource( 1 )
+text = "0 / 100"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

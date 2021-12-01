@@ -1,0 +1,309 @@
+[gd_scene load_steps=42 format=2]
+
+[ext_resource path="res://tilesets/tiles_2x2.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Mom.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Apartment.gd" type="Script" id=4]
+[ext_resource path="res://scenes/PlayUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/map/RoomArea.gd" type="Script" id=6]
+[ext_resource path="res://scenes/RoomAreas.gd" type="Script" id=7]
+[ext_resource path="res://scenes/objects/BathroomSink.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/objects/TV.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/objects/KitchenSink.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/objects/Computer.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/objects/Microwave.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/objects/StoveOven.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/objects/OutdoorChair.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/objects/Dishwasher.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/objects/Plants.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/objects/Toilet.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/objects/Couch.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/objects/ComfyChair.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/objects/TwinBed.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/objects/Bathtub.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/objects/Desk.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/objects/DeskChair.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/objects/DoubleBed.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/objects/Console.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scenes/DJ.tscn" type="PackedScene" id=26]
+[ext_resource path="res://scenes/objects/Dresser.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scenes/objects/Dryer.tscn" type="PackedScene" id=28]
+[ext_resource path="res://scenes/objects/WashingMachine.tscn" type="PackedScene" id=29]
+[ext_resource path="res://scenes/objects/Refrigerator.tscn" type="PackedScene" id=30]
+[ext_resource path="res://scenes/objects/Rug.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scenes/objects/Bookshelf.tscn" type="PackedScene" id=32]
+[ext_resource path="res://scenes/PauseUI.tscn" type="PackedScene" id=33]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 85.5, 59 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 121.5, 79.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 70.25, 142.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 158.25, 159 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 168.5, 107.5 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 120.75, 122 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 126.75, 148 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 123.75, 120 )
+
+[node name="Apartment" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_left = -571.0
+margin_top = -448.0
+margin_right = 2119.0
+margin_bottom = 1371.0
+color = Color( 0.133333, 0.12549, 0.203922, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+light_mask = 7
+color = Color( 0.796078, 0.866667, 0.988235, 1 )
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Navigation2D"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -327664, 0, 196609, -327663, 0, 3, -327662, 0, 3, -327661, 0, 3, -327660, 0, 3, -327659, 0, 3, -327658, 0, 0, -262128, 0, 1, -262127, 0, 65538, -262126, 0, 65538, -262125, 0, 65538, -262124, 0, 65538, -262123, 0, 65538, -262122, 0, 131075, -196592, 0, 1, -196591, 0, 65538, -196590, 0, 65538, -196589, 1, 0, -196588, 1, 0, -196587, 0, 65538, -196586, 0, 131075, -131056, 0, 131072, -131055, 0, 131074, -131054, 0, 65539, -131053, 0, 131073, -131052, 0, 131074, -131051, 0, 65539, -131050, 0, 196611, -65519, 0, 1, -65518, 0, 131075, -65516, 0, 1, -65515, 0, 131075, -65514, 4, 0, 9, 0, 196609, 10, 0, 3, 11, 0, 3, 12, 0, 3, 13, 0, 3, 14, 0, 3, 15, 0, 3, 16, 0, 3, 17, 0, 65537, 18, 0, 131075, 20, 0, 1, 21, 0, 2, 22, 1, 0, 23, 0, 3, 24, 0, 3, 25, 0, 3, 26, 0, 0, 65537, 0, 196609, 65538, 0, 3, 65539, 0, 3, 65540, 0, 3, 65541, 0, 3, 65542, 0, 0, 65545, 0, 1, 65546, 0, 65538, 65547, 0, 65538, 65548, 0, 65538, 65549, 1, 0, 65550, 0, 65538, 65551, 0, 65538, 65552, 1, 0, 65553, 0, 65538, 65554, 0, 131075, 65556, 0, 1, 65557, 0, 65538, 65558, 0, 65538, 65559, 0, 65538, 65560, 1, 0, 65561, 1, 0, 65562, 0, 131075, 131073, 0, 1, 131074, 0, 65538, 131075, 0, 65538, 131076, 0, 65538, 131077, 0, 65538, 131078, 0, 131075, 131081, 0, 1, 131082, 0, 65538, 131083, 0, 65538, 131084, 0, 65538, 131085, 1, 0, 131086, 0, 65538, 131087, 0, 65538, 131088, 0, 65538, 131089, 0, 65538, 131090, 0, 2, 131091, 0, 3, 131092, 0, 65537, 131093, 0, 65538, 131094, 0, 65538, 131095, 0, 65538, 131096, 1, 0, 131097, 1, 0, 131098, 0, 131075, 196609, 0, 1, 196610, 0, 65538, 196611, 0, 65538, 196612, 0, 65538, 196613, 0, 65538, 196614, 0, 131075, 196617, 0, 1, 196618, 1, 0, 196619, 1, 0, 196620, 0, 65538, 196621, 0, 65538, 196622, 0, 65538, 196623, 0, 65538, 196624, 0, 65538, 196625, 0, 65538, 196626, 0, 65539, 196627, 0, 131073, 196628, 0, 131074, 196629, 0, 65538, 196630, 0, 65538, 196631, 0, 65538, 196632, 0, 65538, 196633, 0, 65538, 196634, 0, 131075, 262145, 0, 1, 262146, 0, 65538, 262147, 0, 65538, 262148, 0, 65538, 262149, 0, 65538, 262150, 0, 2, 262151, 4, 0, 262153, 0, 131072, 262154, 0, 131074, 262155, 0, 65538, 262156, 0, 65538, 262157, 0, 65538, 262158, 0, 65538, 262159, 0, 65538, 262160, 0, 65538, 262161, 1, 0, 262162, 0, 131075, 262164, 0, 1, 262165, 0, 65538, 262166, 0, 65538, 262167, 0, 65538, 262168, 0, 65538, 262169, 1, 0, 262170, 0, 131075, 327681, 0, 1, 327682, 0, 65538, 327683, 0, 65538, 327684, 0, 65538, 327685, 0, 65538, 327686, 0, 65538, 327687, 1, 0, 327688, 4, 0, 327690, 0, 1, 327691, 0, 65538, 327692, 0, 65538, 327693, 0, 65538, 327694, 0, 65538, 327695, 0, 65538, 327696, 0, 65538, 327697, 0, 65538, 327698, 0, 131075, 327700, 0, 1, 327701, 0, 65538, 327702, 0, 65538, 327703, 0, 65538, 327704, 0, 65538, 327705, 0, 65538, 327706, 0, 131075, 393217, 0, 1, 393218, 0, 65538, 393219, 0, 65538, 393220, 0, 65538, 393221, 0, 65538, 393222, 0, 65538, 393223, 1, 0, 393224, 4, 0, 393226, 0, 1, 393227, 0, 65538, 393228, 0, 65538, 393229, 0, 65538, 393230, 0, 65538, 393231, 0, 65538, 393232, 0, 65538, 393233, 0, 65538, 393234, 0, 131075, 393236, 0, 1, 393237, 0, 65538, 393238, 0, 65538, 393239, 0, 65538, 393240, 0, 65538, 393241, 0, 65538, 393242, 0, 131075, 458753, 0, 1, 458754, 1, 0, 458755, 1, 0, 458756, 0, 65538, 458757, 0, 65538, 458758, 0, 65538, 458759, 4, 0, 458760, 4, 0, 458762, 0, 1, 458763, 0, 65538, 458764, 0, 65538, 458765, 0, 65538, 458766, 0, 65538, 458767, 0, 65538, 458768, 0, 65538, 458769, 2, 131072, 458770, 4, 0, 458772, 0, 1, 458773, 1, 0, 458774, 1, 0, 458775, 0, 65538, 458776, 0, 65538, 458777, 0, 65538, 458778, 0, 131075, 524289, 0, 131072, 524290, 0, 131073, 524291, 0, 131073, 524292, 0, 131073, 524293, 0, 131074, 524294, 0, 65538, 524295, 0, 3, 524296, 0, 3, 524297, 0, 3, 524298, 0, 65537, 524299, 0, 65538, 524300, 0, 65538, 524301, 0, 65538, 524302, 0, 65538, 524303, 0, 65538, 524304, 0, 65538, 524305, 1, 0, 524306, 4, 0, 524308, 0, 131072, 524309, 0, 131073, 524310, 0, 131073, 524311, 1, 0, 524312, 1, 0, 524313, 0, 131074, 524314, 0, 131075, 589829, 0, 1, 589830, 0, 65538, 589831, 0, 65539, 589832, 0, 131073, 589833, 0, 131074, 589834, 0, 65538, 589835, 0, 65538, 589836, 0, 65538, 589837, 0, 65538, 589838, 0, 65538, 589839, 0, 65538, 589840, 0, 65538, 589841, 2, 131072, 589842, 4, 0, 589845, 4, 0, 589846, 4, 0, 589847, 4, 0, 589848, 4, 0, 589849, 0, 1, 589850, 0, 131075, 655360, 4, 0, 655361, 4, 0, 655362, 4, 0, 655363, 4, 0, 655364, 4, 0, 655365, 0, 65537, 655366, 0, 65538, 655367, 0, 131075, 655369, 0, 1, 655370, 0, 65538, 655371, 0, 65538, 655372, 0, 65538, 655373, 0, 65538, 655374, 0, 65538, 655375, 0, 65538, 655376, 0, 65538, 655377, 2, 131072, 655378, 4, 0, 655380, 4, 0, 655381, 4, 0, 655382, 4, 0, 655383, 4, 0, 655384, 4, 0, 655385, 0, 65537, 655386, 0, 131075, 720896, 4, 0, 720897, 3, 65536, 720898, 3, 65536, 720899, 3, 65536, 720900, 3, 65536, 720901, 0, 65538, 720902, 0, 65538, 720903, 0, 131075, 720905, 0, 1, 720906, 0, 65538, 720907, 0, 65538, 720908, 0, 65538, 720909, 0, 65538, 720910, 0, 65538, 720911, 0, 65538, 720912, 0, 65538, 720913, 2, 131072, 720914, 4, 0, 720916, 4, 0, 720917, 3, 65536, 720918, 3, 65536, 720919, 3, 65536, 720920, 3, 65536, 720921, 0, 65538, 720922, 0, 131075, 786432, 4, 0, 786433, 0, 65538, 786434, 0, 65538, 786435, 0, 65538, 786436, 0, 65538, 786437, 0, 65538, 786438, 0, 65538, 786439, 0, 131075, 786441, 0, 1, 786442, 0, 65538, 786443, 0, 65538, 786444, 0, 65538, 786445, 0, 65538, 786446, 2, 1, 786447, 2, 1, 786448, 2, 1, 786449, 2, 65536, 786450, 4, 0, 786452, 3, 1, 786453, 0, 65538, 786454, 0, 65538, 786455, 0, 65538, 786456, 0, 65538, 786457, 0, 65538, 786458, 0, 131075, 851968, 4, 0, 851969, 0, 131073, 851970, 0, 131073, 851971, 0, 131073, 851972, 0, 131073, 851973, 0, 131074, 851974, 0, 65538, 851975, 0, 131075, 851977, 0, 1, 851978, 0, 65538, 851979, 0, 65538, 851980, 0, 65538, 851981, 0, 65538, 851982, 0, 65538, 851983, 0, 65538, 851984, 0, 65538, 851985, 0, 65538, 851986, 0, 131075, 851988, 3, 1, 851989, 0, 65538, 851990, 0, 65538, 851991, 0, 65538, 851992, 0, 65538, 851993, 0, 65538, 851994, 0, 131075, 917509, 0, 1, 917510, 0, 65538, 917511, 0, 2, 917512, 0, 3, 917513, 0, 65537, 917514, 0, 65538, 917515, 0, 65538, 917516, 0, 65538, 917517, 0, 65538, 917518, 0, 65538, 917519, 0, 65538, 917520, 0, 65538, 917521, 0, 65538, 917522, 0, 131075, 917524, 3, 1, 917525, 0, 65538, 917526, 0, 65538, 917527, 0, 65538, 917528, 0, 65538, 917529, 0, 65538, 917530, 0, 131075, 983045, 0, 1, 983046, 0, 65538, 983047, 0, 65538, 983048, 0, 65538, 983049, 0, 65538, 983050, 0, 65538, 983051, 0, 65538, 983052, 0, 65538, 983053, 0, 65538, 983054, 0, 65538, 983055, 0, 65538, 983056, 0, 65538, 983057, 0, 65538, 983058, 0, 2, 983059, 0, 3, 983060, 0, 65537, 983061, 0, 65538, 983062, 0, 65538, 983063, 0, 65538, 983064, 0, 65538, 983065, 0, 65538, 983066, 0, 131075, 1048581, 0, 131072, 1048582, 1, 0, 1048583, 1, 0, 1048584, 0, 131073, 1048585, 0, 131073, 1048586, 0, 131073, 1048587, 0, 131073, 1048588, 0, 131073, 1048589, 0, 131073, 1048590, 0, 131073, 1048591, 0, 131073, 1048592, 0, 131073, 1048593, 0, 131073, 1048594, 0, 131073, 1048595, 0, 131073, 1048596, 0, 131073, 1048597, 0, 131073, 1048598, 0, 131073, 1048599, 0, 131073, 1048600, 0, 131073, 1048601, 0, 131073, 1048602, 0, 196611, 1114117, 4, 0, 1114118, 4, 0, 1114119, 4, 0, 1114120, 4, 0 )
+
+[node name="Bathtub" parent="Navigation2D/TileMap" instance=ExtResource( 21 )]
+position = Vector2( 816, 517 )
+wait_radius = 30.0
+
+[node name="Computer" parent="Navigation2D/TileMap" instance=ExtResource( 11 )]
+position = Vector2( 810, 140 )
+rotation = 1.5708
+
+[node name="Dishwasher" parent="Navigation2D/TileMap" instance=ExtResource( 15 )]
+position = Vector2( 468, 400 )
+rotation = -3.14159
+
+[node name="Bathtub2" parent="Navigation2D/TileMap" instance=ExtResource( 21 )]
+position = Vector2( 48, 400 )
+rotation = -1.5708
+wait_radius = 30.0
+
+[node name="BathroomSink" parent="Navigation2D/TileMap" instance=ExtResource( 8 )]
+position = Vector2( 128, 368 )
+
+[node name="Console" parent="Navigation2D/TileMap" instance=ExtResource( 25 )]
+position = Vector2( 111, 121 )
+
+[node name="TV" parent="Navigation2D/TileMap" instance=ExtResource( 9 )]
+position = Vector2( 154, 78 )
+
+[node name="BathroomSink2" parent="Navigation2D/TileMap" instance=ExtResource( 8 )]
+position = Vector2( 704, 368 )
+
+[node name="BathroomSink3" parent="Navigation2D/TileMap" instance=ExtResource( 8 )]
+position = Vector2( 768, 368 )
+
+[node name="Toilet" parent="Navigation2D/TileMap" instance=ExtResource( 17 )]
+position = Vector2( 835, 431 )
+rotation = 1.5708
+
+[node name="ComfyChair2" parent="Navigation2D/TileMap" instance=ExtResource( 19 )]
+position = Vector2( 557, 142 )
+rotation = 1.56731
+
+[node name="ComfyChair" parent="Navigation2D/TileMap" instance=ExtResource( 19 )]
+position = Vector2( 525, 44 )
+
+[node name="Couch2" parent="Navigation2D/TileMap" instance=ExtResource( 18 )]
+position = Vector2( 353, 109 )
+rotation = 3.14159
+
+[node name="Couch" parent="Navigation2D/TileMap" instance=ExtResource( 18 )]
+position = Vector2( 431, 66 )
+rotation = 1.5708
+
+[node name="TV2" parent="Navigation2D/TileMap" instance=ExtResource( 9 )]
+position = Vector2( 338, 48 )
+rotation = -0.785398
+scale = Vector2( 1, 1 )
+
+[node name="KitchenSink" parent="Navigation2D/TileMap" instance=ExtResource( 10 )]
+position = Vector2( 504, 400 )
+rotation = -3.14159
+
+[node name="StoveOven" parent="Navigation2D/TileMap" instance=ExtResource( 13 )]
+position = Vector2( 560, 323 )
+rotation = 1.5708
+
+[node name="Microwave" parent="Navigation2D/TileMap" instance=ExtResource( 12 )]
+position = Vector2( 564, 373 )
+rotation = 1.5708
+
+[node name="OutdoorChair" parent="Navigation2D/TileMap" instance=ExtResource( 14 )]
+position = Vector2( 651, -86 )
+rotation = 2.4644
+
+[node name="OutdoorChair2" parent="Navigation2D/TileMap" instance=ExtResource( 14 )]
+position = Vector2( 619, -87 )
+rotation = 3.61632
+
+[node name="Plants" parent="Navigation2D/TileMap" instance=ExtResource( 16 )]
+position = Vector2( 548, -65 )
+
+[node name="TwinBed" parent="Navigation2D/TileMap" instance=ExtResource( 20 )]
+position = Vector2( 99, 238 )
+rotation = 3.14159
+
+[node name="DeskChair" parent="Navigation2D/TileMap" instance=ExtResource( 23 )]
+position = Vector2( 212, 159 )
+rotation = -0.820305
+
+[node name="Desk" parent="Navigation2D/TileMap" instance=ExtResource( 22 )]
+position = Vector2( 232, 192 )
+rotation = 1.5708
+
+[node name="Plants2" parent="Navigation2D/TileMap" instance=ExtResource( 16 )]
+position = Vector2( 706, -97 )
+
+[node name="DoubleBed" parent="Navigation2D/TileMap" instance=ExtResource( 24 )]
+position = Vector2( 799, 60 )
+
+[node name="Desk-Mom" parent="Navigation2D/TileMap" instance=ExtResource( 22 )]
+position = Vector2( 692, 236 )
+
+[node name="Dresser" parent="Navigation2D/TileMap" instance=ExtResource( 27 )]
+position = Vector2( 767, 263 )
+rotation = 3.14159
+
+[node name="Rug" parent="Navigation2D/TileMap" instance=ExtResource( 31 )]
+position = Vector2( 420, 232 )
+rotation = 1.5708
+scale = Vector2( 4, 4 )
+
+[node name="Refrigerator" parent="Navigation2D/TileMap" instance=ExtResource( 30 )]
+position = Vector2( 557, 272 )
+rotation = 1.5708
+
+[node name="WashingMachine" parent="Navigation2D/TileMap" instance=ExtResource( 29 )]
+position = Vector2( 239, 518 )
+rotation = -3.14159
+
+[node name="Dryer" parent="Navigation2D/TileMap" instance=ExtResource( 28 )]
+position = Vector2( 208, 518 )
+rotation = -3.14159
+
+[node name="Bookshelf" parent="Navigation2D/TileMap" instance=ExtResource( 32 )]
+position = Vector2( 60, 122 )
+rotation = -1.5708
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 212, 310 )
+collision_mask = 7
+
+[node name="PlayUI" parent="." instance=ExtResource( 5 )]
+
+[node name="Canvas" parent="." instance=ExtResource( 33 )]
+
+[node name="DJ" parent="." instance=ExtResource( 26 )]
+
+[node name="Mom" parent="." instance=ExtResource( 3 )]
+position = Vector2( 767, 175 )
+annoyance_decay_per_tick = null
+navigation_path = NodePath("../Navigation2D")
+debug_vision = null
+rooms_areas_path = NodePath("../RoomAreas")
+
+[node name="RoomAreas" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 7 )
+
+[node name="Bathroom" type="Area2D" parent="RoomAreas"]
+script = ExtResource( 6 )
+id = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomAreas/Bathroom"]
+position = Vector2( 90.5, 383 )
+shape = SubResource( 1 )
+
+[node name="Balcony" type="Area2D" parent="RoomAreas"]
+script = ExtResource( 6 )
+id = 1
+allowed = false
+annoyance_per_tick = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomAreas/Balcony"]
+position = Vector2( 620.5, -80.5 )
+shape = SubResource( 2 )
+
+[node name="Hallway" type="Area2D" parent="RoomAreas"]
+script = ExtResource( 6 )
+id = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomAreas/Hallway"]
+position = Vector2( 232.75, 412.5 )
+shape = SubResource( 3 )
+
+[node name="Kitchen" type="Area2D" parent="RoomAreas"]
+script = ExtResource( 6 )
+id = 4
+annoyance_per_tick = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomAreas/Kitchen"]
+position = Vector2( 461.75, 374 )
+shape = SubResource( 4 )
+
+[node name="LivingRoom" type="Area2D" parent="RoomAreas"]
+script = ExtResource( 6 )
+id = 5
+annoyance_per_tick = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomAreas/LivingRoom"]
+position = Vector2( 452.5, 107.5 )
+shape = SubResource( 5 )
+
+[node name="MomBathroom" type="Area2D" parent="RoomAreas"]
+script = ExtResource( 6 )
+id = 6
+allowed = false
+annoyance_per_tick = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomAreas/MomBathroom"]
+position = Vector2( 741.25, 417 )
+shape = SubResource( 6 )
+
+[node name="MomBedroom" type="Area2D" parent="RoomAreas"]
+script = ExtResource( 6 )
+id = 7
+allowed = false
+annoyance_per_tick = 30
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomAreas/MomBedroom"]
+position = Vector2( 747.25, 147 )
+shape = SubResource( 7 )
+
+[node name="MyRoom" type="Area2D" parent="RoomAreas"]
+script = ExtResource( 6 )
+id = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomAreas/MyRoom"]
+position = Vector2( 154.25, 150 )
+shape = SubResource( 8 )
+
+[node name="Bookshelf" parent="." instance=ExtResource( 32 )]
+position = Vector2( 720, 24 )
+
+[node name="Dresser" parent="." instance=ExtResource( 27 )]
+position = Vector2( 77, 60 )

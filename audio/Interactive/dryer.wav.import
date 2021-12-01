@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dryer.wav-37aac11b48291ee86102cc86deda2435.sample"
+
+[deps]
+
+source_file="res://audio/Interactive/dryer.wav"
+dest_files=[ "res://.import/dryer.wav-37aac11b48291ee86102cc86deda2435.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

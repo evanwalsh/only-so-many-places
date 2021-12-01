@@ -1,0 +1,264 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "CharacterMover",
+"language": "GDScript",
+"path": "res://scripts/characters/CharacterMover.gd"
+}, {
+"base": "Interactive",
+"class": "Computer",
+"language": "GDScript",
+"path": "res://scenes/Computer.gd"
+}, {
+"base": "Interactive",
+"class": "Console",
+"language": "GDScript",
+"path": "res://scenes/objects/Console.gd"
+}, {
+"base": "Reference",
+"class": "Constants",
+"language": "GDScript",
+"path": "res://scripts/helpers/Constants.gd"
+}, {
+"base": "Node2D",
+"class": "DescriptionLabel",
+"language": "GDScript",
+"path": "res://scenes/DescriptionLabel.gd"
+}, {
+"base": "Interactive",
+"class": "Goal",
+"language": "GDScript",
+"path": "res://scenes/Goal.gd"
+}, {
+"base": "Control",
+"class": "InGameTutorial",
+"language": "GDScript",
+"path": "res://scenes/InGameTutorial.gd"
+}, {
+"base": "Node",
+"class": "InteractionSystem",
+"language": "GDScript",
+"path": "res://scripts/characters/InteractionSystem.gd"
+}, {
+"base": "Node2D",
+"class": "Interactive",
+"language": "GDScript",
+"path": "res://scripts/objects/Interactive.gd"
+}, {
+"base": "Node2D",
+"class": "InteractiveProgress",
+"language": "GDScript",
+"path": "res://scenes/Interactive/InteractiveProgress.gd"
+}, {
+"base": "Object",
+"class": "Mask",
+"language": "GDScript",
+"path": "res://scripts/helpers/Mask.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Mom",
+"language": "GDScript",
+"path": "res://scenes/Mom.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://scenes/Player.gd"
+}, {
+"base": "Camera2D",
+"class": "PlayerCamera",
+"language": "GDScript",
+"path": "res://scenes/PlayerCamera.gd"
+}, {
+"base": "Area2D",
+"class": "RoomArea",
+"language": "GDScript",
+"path": "res://scripts/map/RoomArea.gd"
+}, {
+"base": "Node2D",
+"class": "RoomAreas",
+"language": "GDScript",
+"path": "res://scenes/RoomAreas.gd"
+}, {
+"base": "Node2D",
+"class": "Scent",
+"language": "GDScript",
+"path": "res://scenes/Player/Scent.gd"
+}, {
+"base": "Node",
+"class": "State",
+"language": "GDScript",
+"path": "res://scripts/fsm/State.gd"
+}, {
+"base": "Node",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://scripts/fsm/StateMachine.gd"
+}, {
+"base": "Node2D",
+"class": "VisionSystem",
+"language": "GDScript",
+"path": "res://scripts/characters/VisionSystem.gd"
+} ]
+_global_script_class_icons={
+"CharacterMover": "",
+"Computer": "",
+"Console": "",
+"Constants": "",
+"DescriptionLabel": "",
+"Goal": "",
+"InGameTutorial": "",
+"InteractionSystem": "",
+"Interactive": "",
+"InteractiveProgress": "",
+"Mask": "",
+"Mom": "",
+"Player": "",
+"PlayerCamera": "",
+"RoomArea": "",
+"RoomAreas": "",
+"Scent": "",
+"State": "",
+"StateMachine": "",
+"VisionSystem": ""
+}
+
+[application]
+
+config/name="ONLY SO MANY PLACES"
+config/description="A game by Evan Walsh. Made for the Game Off 2021 game jam."
+run/main_scene="res://scenes/Title.tscn"
+run/delta_sync_after_draw=true
+boot_splash/use_filter=false
+config/icon="res://icon.png"
+
+[autoload]
+
+DescriptionManager="*res://scripts/objects/DescriptionManager.gd"
+Events="*res://scripts/objects/Events.gd"
+Game="*res://scripts/objects/Game.gd"
+Stats="*res://scripts/objects/Stats.gd"
+
+[debug]
+
+gdscript/warnings/return_value_discarded=false
+
+[display]
+
+window/size/width=480
+window/size/height=270
+window/size/borderless=true
+window/size/fullscreen=true
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[gui]
+
+theme/custom="res://ui/default_theme.tres"
+theme/custom_font="res://ui/fonts/Pixica-16.tres"
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
+mp3={
+"loop": false,
+"loop_offset": 0
+}
+
+[input]
+
+move_forward={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_backward={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+run={
+"deadzone": 0.5,
+"events": [  ]
+}
+sneak={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":67,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+interact={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":2,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+pause={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_render/layer_1="Environment"
+2d_render/layer_2="Characters"
+2d_render/layer_3="Static Objects"
+2d_physics/layer_1="Environment"
+2d_physics/layer_2="Characters"
+2d_physics/layer_3="Static Objects"
+2d_physics/layer_4="Invisibles"
+2d_physics/layer_5="Interactive"
+
+[locale]
+
+translations=PoolStringArray( "res://i18n/translation.en.translation" )
+locale_filter=[ 1, [ "en" ] ]
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+2d/snapping/use_gpu_pixel_snap=true
+environment/default_clear_color=Color( 0, 0, 0, 1 )
+environment/default_environment="res://default_env.tres"
+quality/dynamic_fonts/use_oversampling=false

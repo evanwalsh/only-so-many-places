@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/PauseUI.gd" type="Script" id=1]
+[ext_resource path="res://textures/ui/menu_pointer.png" type="Texture" id=2]
+
+[sub_resource type="Shader" id=4]
+code = "shader_type canvas_item;
+
+uniform float amount: hint_range(0.0, 5.0) = 2.5;
+
+void fragment() {
+	vec4 tex = textureLod(SCREEN_TEXTURE, SCREEN_UV, amount);
+	COLOR.rgb = tex.rgb;
+}"
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = SubResource( 4 )
+shader_param/amount = 2.5
+
+[node name="Canvas" type="CanvasLayer"]
+
+[node name="PauseUI" type="Control" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pointer_texture = ExtResource( 2 )
+
+[node name="BlurRect" type="ColorRect" parent="PauseUI"]
+material = SubResource( 5 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseUI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = -29.5
+margin_right = 64.0
+margin_bottom = 33.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PauseUI/VBoxContainer"]
+margin_right = 128.0
+margin_bottom = 13.0
+text = "UI_PAUSED"
+align = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RetryButton" type="Button" parent="PauseUI/VBoxContainer"]
+margin_top = 17.0
+margin_right = 128.0
+margin_bottom = 38.0
+text = "UI_RETRY"
+
+[node name="QuitButton" type="Button" parent="PauseUI/VBoxContainer"]
+margin_top = 42.0
+margin_right = 128.0
+margin_bottom = 63.0
+text = "UI_QUIT"

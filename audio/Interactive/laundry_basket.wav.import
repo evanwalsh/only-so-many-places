@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/laundry_basket.wav-ea1a26d0d11bf8b61685931fc23fdfae.sample"
+
+[deps]
+
+source_file="res://audio/Interactive/laundry_basket.wav"
+dest_files=[ "res://.import/laundry_basket.wav-ea1a26d0d11bf8b61685931fc23fdfae.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

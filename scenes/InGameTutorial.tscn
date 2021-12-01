@@ -1,0 +1,176 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/InGameTutorial.gd" type="Script" id=1]
+
+[node name="InGameTutorial" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Look" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 136.0
+margin_bottom = 13.0
+
+[node name="ControlName" type="Label" parent="VBoxContainer/Look"]
+margin_right = 100.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 100, 0 )
+text = "INPUT_LOOK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Binding" type="Label" parent="VBoxContainer/Look"]
+margin_left = 104.0
+margin_right = 136.0
+margin_bottom = 13.0
+text = "Mouse"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveForward" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 17.0
+margin_right = 136.0
+margin_bottom = 30.0
+
+[node name="ControlName" type="Label" parent="VBoxContainer/MoveForward"]
+margin_right = 110.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 100, 0 )
+text = "INPUT_MOVE_FORWARD"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Binding" type="Label" parent="VBoxContainer/MoveForward"]
+margin_left = 114.0
+margin_right = 120.0
+margin_bottom = 13.0
+text = "_"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveBackward" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 34.0
+margin_right = 136.0
+margin_bottom = 47.0
+
+[node name="ControlName" type="Label" parent="VBoxContainer/MoveBackward"]
+margin_right = 116.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 100, 0 )
+text = "INPUT_MOVE_BACKWARD"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Binding" type="Label" parent="VBoxContainer/MoveBackward"]
+margin_left = 120.0
+margin_right = 126.0
+margin_bottom = 13.0
+text = "_"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveLeft" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 51.0
+margin_right = 136.0
+margin_bottom = 64.0
+
+[node name="ControlName" type="Label" parent="VBoxContainer/MoveLeft"]
+margin_right = 100.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 100, 0 )
+text = "INPUT_MOVE_LEFT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Binding" type="Label" parent="VBoxContainer/MoveLeft"]
+margin_left = 104.0
+margin_right = 110.0
+margin_bottom = 13.0
+text = "_"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveRight" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 68.0
+margin_right = 136.0
+margin_bottom = 81.0
+
+[node name="ControlName" type="Label" parent="VBoxContainer/MoveRight"]
+margin_right = 100.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 100, 0 )
+text = "INPUT_MOVE_RIGHT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Binding" type="Label" parent="VBoxContainer/MoveRight"]
+margin_left = 104.0
+margin_right = 110.0
+margin_bottom = 13.0
+text = "_"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Interact" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 85.0
+margin_right = 136.0
+margin_bottom = 98.0
+
+[node name="ControlName" type="Label" parent="VBoxContainer/Interact"]
+margin_right = 100.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 100, 0 )
+text = "INPUT_INTERACT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Binding" type="Label" parent="VBoxContainer/Interact"]
+margin_left = 104.0
+margin_right = 110.0
+margin_bottom = 13.0
+text = "_"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 102.0
+margin_right = 136.0
+margin_bottom = 115.0
+
+[node name="ControlName" type="Label" parent="VBoxContainer/Pause"]
+margin_right = 100.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 100, 0 )
+text = "INPUT_PAUSE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Binding" type="Label" parent="VBoxContainer/Pause"]
+margin_left = 104.0
+margin_right = 110.0
+margin_bottom = 13.0
+text = "_"
+__meta__ = {
+"_edit_use_anchors_": false
+}

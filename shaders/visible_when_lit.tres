@@ -1,0 +1,14 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type canvas_item;
+
+void fragment() {
+  vec4 finalColor = min(texture(TEXTURE, UV), COLOR);
+
+  if(AT_LIGHT_PASS) {
+    COLOR = finalColor;
+  } else {
+    COLOR = vec4(0, 0, 0, 0);
+  }
+}"

@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/InGameTutorial.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Explanation.gd" type="Script" id=2]
+
+[node name="Explanation" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.133333, 0.12549, 0.203922, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InGameTutorial" parent="." instance=ExtResource( 1 )]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = -48.0
+margin_right = -99.0
+margin_bottom = -48.0
+rect_pivot_offset = Vector2( -215, 28 )
+
+[node name="ExplanationText" type="RichTextLabel" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 22.0
+margin_top = -84.0
+margin_right = 243.0
+margin_bottom = 84.0
+bbcode_enabled = true
+bbcode_text = "You are nine years old.
+Your mom punished you by taking away your video game console's power cable.
+
+This is [color=#df7126]unacceptable[/color].
+
+[color=#99e550]Search[/color] the objects around your home.
+
+Find the [color=#fbf236]power cable[/color].
+
+[color=#d95763]Avoid mom's gaze[/color] while she completes tasks around the house. "
+text = "You are nine years old.
+Your mom punished you by taking away your video game console's power cable.
+
+This is unacceptable.
+
+Search the objects around your home.
+
+Find the power cable.
+
+Avoid mom's gaze while she completes tasks around the house. "
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -102.0
+margin_top = -42.0
+margin_right = -20.0
+margin_bottom = -20.0
+text = "I AM READY"

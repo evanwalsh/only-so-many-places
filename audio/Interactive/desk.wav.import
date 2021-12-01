@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/desk.wav-955d620d2e04396e4ff188366f02f5d6.sample"
+
+[deps]
+
+source_file="res://audio/Interactive/desk.wav"
+dest_files=[ "res://.import/desk.wav-955d620d2e04396e4ff188366f02f5d6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

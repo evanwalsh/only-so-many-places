@@ -1,0 +1,72 @@
+keys;en
+MOM_STATE;Mom State: {name}
+OBJECT_BATHROOM_SINK_CABLE;You turn the bathroom sink on and your power cable slithers out of the tap.
+OBJECT_BATHROOM_SINK_NO_CABLE;You turn the water on and stare at it. You feel nothing.
+OBJECT_BATHTUB_CABLE;The bathtub's tap rumbles for a moment before belching out your power cable.
+OBJECT_BATHTUB_NO_CABLE;The bathtub begins to fill with water. You should move on.
+OBJECT_BOOKSHELF_CABLE;Hidden inside a hollowed-out neon bible is your power cable.
+OBJECT_BOOKSHELF_NO_CABLE;Looking through the books, you remember that you can't read. Also, there's no power cable.
+OBJECT_COMPUTER_CABLE;You press the disk eject button and your power cable emerges from the slot.
+OBJECT_COMPUTER_NO_CABLE;You need more than technology to find your power cable.
+OBJECT_CONSOLE_NO_CABLE;Your video game console is a dormant husk of itself without its power cable.
+OBJECT_DESK_CABLE;Inside of a pencil case, your power cable is neatly folded.
+OBJECT_DESK_NO_CABLE;You could maybe learn to read using these materials, but you decide against it.
+OBJECT_DISHWASHER_CABLE;Coiled inside a compartment within the dishwasher, you find your power cable.
+OBJECT_DISHWASHER_NO_CABLE;You open the dishwasher and look inside. You are filled with a dreadful nostalgia.
+OBJECT_DOUBLE_BED_CABLE;You cut open your mom's duvet and find your power cable hiding inside.
+OBJECT_DOUBLE_BED_NO_CABLE;Your mom's bed is a mysterious place, but you know enough to know your power cable is not here.
+OBJECT_DRESSER_CABLE;Inside the dresser, your power cable is pressed between two pairs of jeans.
+OBJECT_DRESSER_NO_CABLE;Inside the dresser, you find socks and socks and more socks. It's all socks.
+OBJECT_DRYER_CABLE;The cable is rattling around inside the dryer. It's warm to the touch.
+OBJECT_DRYER_NO_CABLE;The dryer groans as you open it. You groan back.
+OBJECT_KITCHEN_SINK_CABLE;You close your eyes, thrust your hand into the water, and quickly grip the power cable within.
+OBJECT_KITCHEN_SINK_NO_CABLE;You plunge your hand into the cold, cloudy water of the kitchen sink and only find regret.
+OBJECT_LAUNDRY_BASKET_CABLE;Your laundry holds little interest until you find your power cable buried at the bottom.
+OBJECT_LAUNDRY_BASKET_NO_CABLE;Your sock collection's latest entries rest in the laundry basket, ready to be enjoyed.
+OBJECT_MICROWAVE_CABLE;You pop open the door of the microwave and find your power cable lying on the glass platter.
+OBJECT_MICROWAVE_NO_CABLE;The inside of the microwave contains only remnants of your last meal.
+OBJECT_PLANTS_CABLE;Tangled in the roots of your mom's favorite potted plant, you find your power cable.
+OBJECT_PLANTS_NO_CABLE;You root around in the potted plants and find nothing but dirt.
+OBJECT_REFRIGERATOR_CABLE;Encased in a gelatin dessert, you find your power cable.
+OBJECT_REFRIGERATOR_NO_CABLE;The refrigerator is cold. Not as cold as your mom, who hid the power cable elsewhere.
+OBJECT_STOVE_OVEN_CABLE;Your keen eyes spot your power cable masquerading as one of the stove's heating coils.
+OBJECT_STOVE_OVEN_NO_CABLE;Neither the stovetop nor the oven contain your power cable.
+OBJECT_TOILET_CABLE;In the toilet's tank, you find your power cable bobbing around gently.
+OBJECT_TOILET_NO_CABLE;The toilet flushes. You wish you were playing a video game.
+OBJECT_TV_CABLE;You look at the TV's screen. You see a video of yourself holding the power cable. You look down and there it is.
+OBJECT_TV_NO_CABLE;You look at the TV's screen. It is tuned to a deal channel.
+OBJECT_TWIN_BED_CABLE;Inside of your own bed's pillow is your power cable.
+OBJECT_TWIN_BED_NO_CABLE;Hiding your power cable in your own bed would be kind of clever of Mom, but she did not.
+OBJECT_WASHING_MACHINE_CABLE;The washing machine burbles. Inside you see the power cable sloshing about.
+OBJECT_WASHING_MACHINE_NO_CABLE;The washing machine churns away. You see only water and socks.
+ROOM_NAME_UNKNOWN;Unknown
+ROOM_NAME_BALCONY;Balcony
+ROOM_NAME_BATHROOM;Bathroom
+ROOM_NAME_HALLWAY;Hallway
+ROOM_NAME_KITCHEN;Kitchen
+ROOM_NAME_LIVING_ROOM;Living Room
+ROOM_NAME_MOM_BATHROOM;Mom's Bathroom
+ROOM_NAME_MOM_BEDROOM;Mom's Room
+ROOM_NAME_MY_ROOM;My Room
+INPUT_MOVE_FORWARD;Move Forward
+INPUT_MOVE_BACKWARD;Move Backward
+INPUT_MOVE_LEFT;Move Left
+INPUT_MOVE_RIGHT;Move Right
+INPUT_INTERACT;Search
+INPUT_LOOK;Look Around
+INPUT_PAUSE;Pause
+OBJECTIVE_FIND_CABLE;Find the power cable
+OBJECTIVE_END_GAME;Return to your room!
+END_GAME_WIN;You win
+END_GAME_LOSE;You lose
+UI_QUIT;Quit
+UI_RETRY;Retry
+UI_PAUSED;Paused
+UI_TIME;Time
+UI_ANNOYANCE_HIGH;Highest annoyance
+UI_ANNOYANCE_LOW;Lowest annoyance
+UI_ROOMS_ENTERED;Rooms entered
+UI_PLAYER_INTERACTIONS;Locations searched
+UI_MOM_INTERACTIONS;Mom tasks completed
+UI_PLAY;Play
+UI_ANNOYANCE;Annoyance
