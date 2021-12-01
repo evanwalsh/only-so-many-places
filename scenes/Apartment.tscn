@@ -138,7 +138,6 @@ rotation = 1.5708
 [node name="TV2" parent="Navigation2D/TileMap" instance=ExtResource( 9 )]
 position = Vector2( 338, 48 )
 rotation = -0.785398
-scale = Vector2( 1, 1 )
 
 [node name="KitchenSink" parent="Navigation2D/TileMap" instance=ExtResource( 10 )]
 position = Vector2( 504, 400 )
@@ -210,7 +209,7 @@ position = Vector2( 60, 122 )
 rotation = -1.5708
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 212, 310 )
+position = Vector2( 147, 170 )
 collision_mask = 7
 
 [node name="PlayUI" parent="." instance=ExtResource( 5 )]
